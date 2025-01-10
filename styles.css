@@ -1,0 +1,282 @@
+/* Global Styling */
+body {
+    background: linear-gradient(135deg, #242423 30%, #333533 70%);
+    background-size: 200% 200%; /* Subtle animation */
+    animation: gradientAnimation 20s ease infinite; /* Slower, gentler transition */
+    color: #E8EDDF; /* Text color for contrast */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Header */
+header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #CFDBD5; /* Platinum */
+    color: #242423; /* Eerie Black */
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Upload Size Text*/
+.upload-size {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 1000%;
+    background-color: #333533; /* Jet */
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(207, 219, 213, 0.5); /* Glow effect */
+    animation: smooth-glow 4s infinite;
+    overflow: hidden;
+}
+
+/* Smooth Glow Animation */
+@keyframes smooth-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(207, 219, 213, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(207, 219, 213, 0.8);
+    }
+}
+
+/* Tabs Navigation */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.tab {
+    background: #242423; /* Eerie Black */
+    color: #CFDBD5; /* Platinum */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.tab.active {
+    background: #CFDBD5; /* Platinum */
+    color: #242423; /* Eerie Black */
+}
+
+.tab:hover {
+    background: #CFDBD5;
+    color: #242423;
+    transform: scale(1.1);
+}
+
+/* Upload Box */
+.upload-area {
+    border: 2px dashed #CFDBD5; /* Platinum */
+    border-radius: 12px;
+    padding: 60px; /* Increased padding */
+    margin: 30px auto;
+    background-color: #333533; /* Jet */
+    font-size: 30px;
+    color: #CFDBD5;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-area.dragover {
+    background-color: #242423; /* Eerie Black */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+/* File List */
+.file-list {
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+    text-align: left;
+    max-height: 300px; /* Set the maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.file-list li {
+    background: #242423; /* Eerie Black */
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.file-list li span {
+    color: #E8EDDF; /* Alabaster */
+}
+
+.file-list button {
+    background: none;
+    border: none;
+    color: #FF4D4D;
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    background: #CFDBD5; /* Platinum */
+    color: #242423; /* Eerie Black */
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #E8EDDF; /* Alabaster */
+    transform: scale(1.05);
+}
+
+/* Error Messages */
+.error {
+    color: #FF4D4D;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Clear Queue Button */
+#clear-queue-button {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#clear-queue-button:hover {
+    background-color: #e60000; /* Darker red on hover */
+}
+
+#clear-queue-button:active {
+    background-color: #cc0000; /* Even darker red when clicked */
+}
+
+/* More Information and Usage Section */
+/* Wrapper for the entire page */
+.page-wrapper {
+    flex: 1; /* Main content stretches to push footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Ensure content stretches properly */
+.container-wrapper {
+    flex: 1; /* Push the footer to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* More Information and Usage Section */
+.info-footer {
+    width: 100%; /* Ensure full width for both sections */
+    margin: 0; /* Reset any margins */
+    padding: 0; /* Reset any padding */
+}
+
+.info-usage {
+    width: 100%; /* Full width */
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 30px 40px;
+    box-sizing: border-box; /* Includes padding in width */
+    text-align: left;
+}
+
+.info-usage h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff6f61;
+    text-align: center;
+}
+
+.info-usage p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.info-usage strong {
+    color: #007bff;
+}
+
+.footer {
+    width: 100%; /* Full width */
+    background-color: #121212;
+    color: #777;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    box-sizing: border-box; /* Includes padding */
+    margin: 0;
+}
+
+.file-list li {
+    background: #242423; /* Eerie Black */
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.file-list li span {
+    color: #E8EDDF; /* Alabaster */
+    font-size: 14px;
+}

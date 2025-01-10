@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge-Doc</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Easily merge your files for free. Combine PDFs, Word documents, images, and more with no watermarks or limits. Secure and user-friendly tool.">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>Merge-Doc</header>
+        <div class="container-wrapper">
+            <div class="container">
+                <div id="error" class="error"></div>
+                <nav class="tabs">
+                    <button class="tab active" data-tab="pdf">PDF</button>
+                    <button class="tab" data-tab="doc">DOC/DOCX</button>
+                    <button class="tab" data-tab="txt">TXT</button>
+                    <button class="tab" data-tab="jpeg">JPEG</button>
+                    <button class="tab" data-tab="png">PNG</button>
+                    <button class="tab" data-tab="csv">CSV</button>
+                </nav>            
+                <div class="upload-area" id="upload-area">
+                    <p>Drag & Drop your files here or</p>
+                    <button id="choose-files-btn">Choose Files</button>
+                    <p class="upload-size">Maximum file size: 100 MB</p>
+                    <input id="file-input" type="file" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.csv" multiple hidden>
+                </div>
+                <ul id="file-list" class="file-list"></ul>
+                <button id="clear-queue-button">Clear Queue</button>
+                <button id="merge-button" class="interactive-hover-button" disabled>Merge Files</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Information Section -->
+    <div class="info-usage">
+        <h2>More Information and Usage</h2>
+        <p>
+            Welcome to our free file merging tool! Combine your files quickly and securely, 
+            with no watermarks or hidden fees. Whether you're merging PDFs, Word documents, 
+            images, or text files, our platform provides an easy-to-use solution for all your needs. Zero of your data is stored for misuse or any other purposes. 
+        </p>
+        <p>
+            <strong>Supported Formats:</strong> PDF, DOC, DOCX, TXT, JPEG, PNG, CSV.
+            Just drag and drop your files, and we'll handle the rest. Perfect for students, 
+            professionals, and anyone looking for a reliable file merger. Audio File support coming soon.
+        </p>
+        <p>
+            <strong>Why Use Our Tool? <br></strong>
+            - 100% free and secure<br>
+            - No watermarks or limits<br>
+            - User-friendly and minimalistic design
+        </p>
+        <p>
+            Simplify your workflow by merging your files into one organized document. 
+            Give it a try today!
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Manjot Dhaliwal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
